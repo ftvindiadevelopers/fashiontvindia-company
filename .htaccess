@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{REQUEST_URI}  !(\.png|\.jpg|\.gif|\.jpeg|\.zip|\.css|\.svg|\.js|\.otf|\.ttf|\.webp|\.webm|\.ico|\.pdf)$
+RewriteRule (.*) routes.php [QSA,L]
