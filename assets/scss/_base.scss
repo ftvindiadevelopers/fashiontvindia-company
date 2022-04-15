@@ -1,0 +1,100 @@
+/* ============ General css================
+=========================================== */
+@import "_fonts";
+@import "_colors.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 14px;
+    font-weight: 300;
+    background-color: #efefef;
+  }
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  &:hover{
+      color: inherit;
+  }
+}
+
+button {
+  background: none;
+  outline: none;
+  border: none;
+  * {
+    cursor: pointer;
+  }
+}
+.login-signup {
+  button {
+    padding: 0.45rem 0.8rem;
+    display: flex;
+    align-items: center;
+    ion-icon {
+      margin-top: 50%;
+    }
+    label.icon {
+      font-size: 1.5rem;
+      padding-left: 1rem;
+    }
+  }
+}
+header {
+  background-color: #131313;
+  z-index: 9000;
+  position: fixed;
+  width: 100%;
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+      height: 60px;
+      aspect-ratio: 3;
+      background-color: plum;
+    }
+    .utilities {
+      button {
+        color: #cdcdcd;
+        label {
+        }
+        &:hover {
+          color: #ddd;
+          background-color: #1d1d1d;
+        }
+      }
+    }
+  }
+}
+main {
+  padding: 1rem;
+  padding-top: calc(60px + 1rem);
+}
+section {
+  display: flex;
+  justify-content: center;
+  .section-content {
+    width: 80%;
+  }
+}
+footer {
+    background-color: #202020;
+    color: #efefef;
+    width: 100%;
+    padding: 1rem 0;
+    section{
+        &.copyright{
+            text-align: center;
+            font-weight: 300;
+        }
+    }
+  .footer-social {
+  }
+}

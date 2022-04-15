@@ -1,0 +1,59 @@
+embed{
+  width: 100%;
+  aspect-ratio: 1.5;
+  background-color: $gray-400;
+}
+
+article{
+  &.contact-timeslots{
+    margin-top: 1rem;
+    .article-content{
+      .article-title{
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid $gray-300;
+      }
+      .article-body{
+        .call{
+          padding: 0.5rem 0;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-bottom: 1px solid $gray-300;
+          label{
+            font-size: 1.2rem;
+            font-weight: 600;
+          }
+          a{
+            border: 1px solid $gray-400;
+            border-radius: 1rem;
+            padding: 0.5rem 1rem;
+          }
+        }
+        .timeslots{
+          padding: 0.5rem 0;
+          table{
+            width: 100%;
+            tr{
+              td{
+                &:nth-child(2){
+                  text-align: right;
+                  font-weight: 600;
+                }
+              }
+            }
+          }
+        }
+        .note{
+          padding: 0.5rem 0;
+          padding-left: 0.5rem;
+          border-left: 1px solid $gray-400;
+          p{
+            color: $gray-500;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+}

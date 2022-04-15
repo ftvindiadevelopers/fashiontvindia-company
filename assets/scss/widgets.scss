@@ -1,0 +1,176 @@
+@import "_base";
+
+.deck {
+  display: flex;
+  gap: 1rem;
+}
+.card {
+  background-color: $gray-100;
+  border-radius: 0.75rem;
+  position: relative;
+  width: 300px;
+  overflow: hidden;
+  .card-tag {
+    position: absolute;
+    z-index: 10;
+    background-color: white;
+    padding: 0.2rem;
+    border-bottom-right-radius: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 1rem;
+    width: fit-content;
+    label {
+      &.icon {
+      }
+    }
+  }
+  .reviews {
+  }
+  .card-content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    .card-img {
+      width: 100%;
+      aspect-ratio: 1.3;
+      background-color: $gray-500;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .text-content {
+      .card-body {
+        padding: 2rem 1.2rem;
+        padding-bottom: 1.2rem;
+        .title {
+          h1 {
+            font-size: 1.4rem;
+            font-weight: 600;
+          }
+        }
+        .desc {
+          p {
+          }
+        }
+        .props {
+          display: flex;
+          gap: 1rem;
+
+          .prop {
+            &.like {
+              label {
+                .prop-icon {
+                }
+              }
+            }
+            &.ratings {
+              .rate-stars {
+                label {
+                  .star {
+
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &.card-horizontal {
+    width: 100%;
+  }
+  &.card-vertical {
+    .card-content {
+      flex-direction: column;
+      .card-img {
+        height: unset;
+        width: 100%;
+        aspect-ratio: 1.3;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+
+.form {
+  padding: 1rem 0;
+  .form-input {
+    margin-bottom: 1rem;
+    select {
+      width: 100%;
+      background: none;
+      outline: none;
+      border: none;
+      background-color: $gray-100;
+      border-radius: 0.3rem;
+      box-shadow: 0 5px 10px $gray-200;
+      padding: 0.3rem 0.7rem;
+      option {
+      }
+    }
+    input {
+      width: 100%;
+      background: none;
+      outline: none;
+      border: none;
+      background-color: $gray-100;
+      border-radius: 0.3rem;
+      box-shadow: 0 5px 10px $gray-200;
+      padding: 0.3rem 0.7rem;
+      &::placeholder {
+        color: $gray-400;
+      }
+      &[type="number"] {
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button {
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          margin: 0;
+        }
+      }
+      &[type="checkbox" i] {
+        width: fit-content;
+      }
+      &[type="radio"] {
+        width: fit-content;
+      }
+      &[type="date"] {
+        &::-webkit-inner-spin-button {
+          display: none;
+        }
+        // &::-webkit-calendar-picker-indicator{
+        //   background: none;
+        //   padding: 0;
+        // }
+      }
+    }
+    button,
+    input {
+      background: none;
+      outline: none;
+      border: none;
+      background-color: $gray-100;
+      border-radius: 0.3rem;
+      box-shadow: 0 5px 10px $gray-200;
+      padding: 0.3rem 0.7rem;
+      &[type="submit"] {
+        background-color: $primary-500;
+        color: $gray-100;
+      }
+      &[type="reset"] {
+        background-color: $secondary-200;
+        color: $gray-100;
+      }
+    }
+  }
+}
+
+@import "salon/_detail.salon.scss";
