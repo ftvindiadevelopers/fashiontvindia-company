@@ -1,0 +1,110 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+h1 {
+	margin-bottom: 0.5rem;
+	line-height: 1.5;
+}
+h2 {
+	margin-bottom: 0.5rem;
+	line-height: 1.5;
+}
+h3 {
+	margin-bottom: 0.5rem;
+	line-height: 1.5;
+}
+h4 {
+	margin-bottom: 0.5rem;
+	line-height: 1.5;
+}
+h5 {
+	margin-bottom: 0.5rem;
+	line-height: 1.5;
+}
+p {
+	margin-bottom: 0.5rem;
+	line-height: 1.5;
+}
+
+.row {
+	display: flex;
+	width: 100%;
+	gap: 1rem;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	.col {
+		flex: 1;
+	}
+  @for $i from 1 to 101 {
+    .col-#{$i} {
+      width: calc(#{$i}% - 1rem);
+    }
+  }
+}
+@media screen and (max-width: 800px) {
+	.container {
+		width: 90%;
+	}
+}
+@media screen and (max-width: 400px) {
+	.row {
+    @for $i from 1 to 101 {
+      .col-xs-#{$i} {
+        flex: 0 0 auto;
+        width: calc(#{$i}% - 1rem);
+      }
+    }
+	}
+}
+@media screen and (min-width: 400px) {
+	.row {
+    @for $i from 1 to 101 {
+      .col-sm-#{$i} {
+        flex: 0 0 auto;
+        width: calc(#{$i}% - 1rem);
+      }
+    }
+	}
+}
+@media screen and (min-width: 512px) {
+	.row {
+    @for $i from 1 to 101 {
+      .col-md-#{$i} {
+        flex: 0 0 auto;
+        width: calc(#{$i}% - 1rem);
+      }
+    }
+	}
+}
+@media screen and (min-width: 768px) {
+  .row {
+    @for $i from 1 to 101 {
+      .col-lg-#{$i} {
+        flex: 0 0 auto;
+        width: calc(#{$i}% - 1rem);
+      }
+    }
+	}
+}
+@media screen and (min-width: 1024px) {
+  .row {
+    @for $i from 1 to 101 {
+      .col-xl-#{$i} {
+        flex: 0 0 auto;
+        width: calc(#{$i}% - 1rem);
+      }
+    }
+	}
+}
+@media screen and (min-width: 1920px) {
+  .row {
+    @for $i from 1 to 101 {
+      .col-xxl-#{$i} {
+        flex: 0 0 auto;
+        width: calc(#{$i}% - 1rem);
+      }
+    }
+	}
+}

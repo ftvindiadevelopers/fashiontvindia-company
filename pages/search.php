@@ -8,7 +8,7 @@
   <?php
   include_once $_SERVER['DOCUMENT_ROOT'] . "/components/_head.php";
   ?>
-  <title><?php echo $title; ?></title>
+  <title>Search <?php echo $title; ?></title>
 </head>
 
 <body>
@@ -16,9 +16,16 @@
   include_once $_SERVER['DOCUMENT_ROOT'] . "/components/_nav.php";
   ?>
   <main>
-    <?php include $_SERVER['DOCUMENT_ROOT'] . "/widgets/search/bar.search.php" ?>
-    <?php include $_SERVER['DOCUMENT_ROOT'] . "/widgets/data/data.table.widget.php" ?>
-  </main>
+    <?php 
+    foreach ($_GET["date"] as $date => $value) {
+      echo $value . "<br>";
+    }
+    foreach ($_GET["verticals"] as $vertical => $value) {
+      # code...
+      echo $value . "<br>";
+    }
+    ?>
+  </main> 
   <?php
   include_once $_SERVER['DOCUMENT_ROOT'] . "/components/_footer.php";
   ?>
