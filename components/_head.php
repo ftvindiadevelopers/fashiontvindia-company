@@ -35,7 +35,13 @@ $meta["title"] = $title;
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <!-- FAVICONS -->
+<?php
+function loadVendorCSS($type,$fileURL){
 
+}
+?>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css">
 <link rel="stylesheet" href="/assets/css/layout.min.css" />
 <link rel="stylesheet" href="/assets/css/widgets.min.css" />
 <link rel="stylesheet" href="/assets/css/style.min.css" />

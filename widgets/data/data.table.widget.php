@@ -1,7 +1,7 @@
 <section class="data-table">
   <div class="section-content">
     <div class="table-div">
-      <table>
+      <table id="entryTable">
         <thead>
           <tr>
             <?php for ($j = 0; $j < 5; $j++) { ?>
@@ -10,7 +10,7 @@
           </tr>
         </thead>
         <tbody>
-          <?php for ($i = 0; $i < 10; $i++) { ?>
+          <?php for ($i = 0; $i < 20; $i++) { ?>
             <tr>
               <?php for ($j = 0; $j < 5; $j++) { ?>
                 <td>Cell <?php echo $i . "&nbsp;" . $j; ?></td>
@@ -19,7 +19,7 @@
           <?php } ?>
         </tbody>
         <tfoot>
-
+          
         </tfoot>
       </table>
     </div>

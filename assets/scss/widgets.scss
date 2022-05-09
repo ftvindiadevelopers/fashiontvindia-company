@@ -214,8 +214,13 @@
           width: 100%;
           top: 100%;
           left: 0;
+          padding: 0 0.5rem;
           background-color: $gray-100;
           overflow-y: scroll;
+          p{
+            cursor: pointer;
+            pointer-events: all;
+          }
           &.expand{
             display: block;
           }

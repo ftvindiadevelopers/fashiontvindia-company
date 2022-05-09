@@ -5,9 +5,16 @@
         <form action="search" method="get">
           <div class="form-input">
             <input type="search" name="q" autocomplete="off">
-            <input type="submit" value="Search">
+            <input type="submit" name="search_query" value="Search">
             <div class="suggestions">
-
+              <?php
+              if (isset($_SESSION['SEARCH_HISTORY'])) {
+                $suggestions = explode(",", $_SESSION['SEARCH_HISTORY']);
+                foreach ($suggestions as $key => $value) {
+                  echo "<p class='suggest'>" . $value . "</p>";
+                }
+              }
+              ?>
             </div>
           </div>
           <div class="filters">
@@ -38,15 +45,25 @@
           </div>
         </form>
         <script>
-          document.querySelector("input[type='search']").addEventListener("focusin", () => {
+          var searchInput = document.querySelector("input[type='search']");
+          var suggestOptions = document.querySelectorAll(".suggestions .suggest");
+          console.log(suggestOptions);
+          suggestOptions.forEach((item) => {
+            item.addEventListener("onmouseover", () => {
+              console.log(item);
+
+            })
+          })
+          searchInput.addEventListener("focusin", () => {
             document.querySelector(".suggestions").classList.add("expand");
           });
-          document.querySelector("input[type='search']").addEventListener("focusout", () => {
+          searchInput.addEventListener("focusout", () => {
             document.querySelector(".suggestions").classList.remove("expand");
           });
           document.querySelector(".filters button").addEventListener("click", () => {
             document.querySelector(".filters .filters-window").classList.toggle("expand");
           });
+          
         </script>
       </div>
       <div class="filters">
